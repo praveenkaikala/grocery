@@ -15,18 +15,19 @@ const Slider = async ({ sliders }) => {
     <div>
       <Carousel>
         <CarouselContent>
-            {
-                sliders.map((slider,ind)=>{
-return(
-<CarouselItem key={ind}>
-    <Image src={baseUrl+slider?.image[0]?.url} width={200} height={200} 
-    className="w-full h-[200px] md:h-[400px] object-fit rounded-md"
-    alt={slider?.name}
-    />
-</CarouselItem>
-                    )
-                })
-            }
+          {sliders?.map((slider, ind) => {
+            return (
+              <CarouselItem key={ind}>
+                <Image
+                  src={baseUrl + slider?.image[0]?.url}
+                  width={200}
+                  height={200}
+                  className="w-full h-[200px] md:h-[400px] object-fit rounded-md"
+                  alt={slider?.name}
+                />
+              </CarouselItem>
+            );
+          })}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
