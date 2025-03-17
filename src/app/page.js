@@ -12,7 +12,7 @@ export default async function Home () {
   })
   // console.log("era",categories);
   return (
-   <div className="md:p-10 md:px-16 p-5 px-10 overflow-scroll h-[100vh]">
+   <div className="md:p-10 md:px-16 p-5 px-10">
     <Slider sliders={sliders}/>
     <CategoryList categories={categories}/>
    </div>

@@ -11,7 +11,7 @@ const CategoryList = ({categories}) => {
             categories && (
                 categories.map((item,key)=>{
                     return(
-                        <div className='flex flex-col items-center width-auto group cursor-pointer hover:bg-gray-200 p-3 rounded-md transition-all ease-in-out'>
+                        <div className='flex flex-col items-center width-auto group cursor-pointer bg-green-100 hover:bg-green-200 p-3 rounded-md transition-all ease-in-out'>
                             <Image
                             src={`${baseUrl}${item?.icon[0]?.url}`}
                             width={100}
