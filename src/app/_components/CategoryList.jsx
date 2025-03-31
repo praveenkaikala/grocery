@@ -1,17 +1,18 @@
 import React from 'react'
 import { baseUrl } from '../_utils/GlobalApi'
 import Image from 'next/image'
+import Header from './styles/Header'
 
 const CategoryList = ({categories}) => {
   return (
     <div className='mt-5'>
-        <h2 className='text-green-600 font-bold text-2xl'>Shop By Categories</h2>
-        <div className='flex justify-between flex-wrap py-4'>
+      <Header heading={"Shop By Categories"}/>
+        <div className='flex flex-wrap py-4 gap-3 justify-evenly md:justify-start'>
         {
             categories && (
                 categories.map((item,key)=>{
                     return(
-                        <div className='flex flex-col items-center width-auto group cursor-pointer bg-green-100 hover:bg-green-200 p-3 rounded-md transition-all ease-in-out'>
+                        <div className='flex flex-col items-center width-auto group cursor-pointer bg-green-100 hover:bg-green-200 p-3 rounded-md transition-all ease-in-out my-3' key={key}>
                             <Image
                             src={`${baseUrl}${item?.icon[0]?.url}`}
                             width={100}
